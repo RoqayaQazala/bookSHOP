@@ -1,7 +1,5 @@
-
 var Book = require('./models/book.js');
-var User = require('./models/userModel.js');
-var jwt = require('jwt-simple');
+// var jwt = require('jwt-simple');
 
 
 module.exports.handleUsers = {
@@ -26,18 +24,14 @@ module.exports.handleUsers = {
         }
       });
   },
-
+}
  
-
-
-module.exports.handelBook = {
-
-	showbook: function(req, res)  {
-		Book.getBooks(function(err, books)  {
-			if(err){
-				throw err;
-			}
-			res.json(books);
-		});
-	},
+module.exports.handelBook={showbook : function(req, res)  {
+    Book.getBooks(function(err, books)  {
+      if(err){
+        throw err;
+      }
+      res.json(books);
+    });
+  },
 }
