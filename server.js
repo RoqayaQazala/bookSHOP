@@ -12,6 +12,7 @@ app.use(express.static(__dirname + '/client'));
 app.use(bodyParser.urlencoded());
 
 
+
 // Connect to Mongoose
 // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/bookstore');
 // var db = mongoose.connection;
@@ -19,8 +20,11 @@ app.use(bodyParser.urlencoded());
 // // db.once('open',function () {
 // // 		console.log('mongoDB is open');
 // // 	});
-var users = [];
+var books = [
+{name : 'book1'},{name : 'book2'},{name : 'book3'},{name : 'book4'},{name : 'book5'},{name : 'book6'},{name : 'book7'},{name : 'book8'},{name : 'book9'},{name : 'book10'},{name : 'book11'},{name : 'book12'}
+];
 
+var users = []
 app.post('/signup', function(req, res){
 	users.push([req.body.name,req.body.pass])
 	res.sendFile(path.join(__dirname + '/client/app/account/signin.html'))
@@ -30,7 +34,7 @@ app.post('/signin', function(req, res){
 	for (var i=0; i<users.length ;i++){
 		console.log(users[i][0])
 		if (users[i][0] === req.body.name && users[i][1] === req.body.pass){
-			res.sendFile(path.join(__dirname + '/client/index.html'))
+			res.sendFile(path.join(__dirname + '/client/books.html'))
 		}
 	} 
 });
