@@ -1,0 +1,25 @@
+{
+  "name": "roro",
+  "version": "1.0.0",
+  "description": "<!-- \r > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.",
+  "main": "handlers.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoqayaQazala/bookSHOP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RoqayaQazala/bookSHOP/issues"
+  },
+  "homepage": "https://github.com/RoqayaQazala/bookSHOP#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
+    "express-session": "^1.15.5"
+  }
+}

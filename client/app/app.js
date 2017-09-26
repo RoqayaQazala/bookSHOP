@@ -1,8 +1,8 @@
 
-angular.module('books',
- [
- 'book.services'
-	]);
+angular.module('books')
+ .component('app',{
+
+})
 .config(function(){
 
 	
@@ -12,3 +12,5 @@ angular.module('books',
     })     
 
 })
+
+

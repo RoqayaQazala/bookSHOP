@@ -1,4 +1,4 @@
-var Book = require('./models/book.js');
+// var Book = require('./models/book.js');
 // var jwt = require('jwt-simple');
 
 
@@ -11,16 +11,6 @@ module.exports.handleUsers = {
       .then(function (user) {
         if (!user) {
           res.status(404).json("user not found")
-        } else {
-          user.comparePasswords(password)
-            .then(function (isMatch) {
-              if (isMatch) {
-                var token = jwt.encode(user, 'secret');
-                res.json({token : token, user : user});
-              } else {
-                res.json("password not matched")
-              }
-            });
         }
       });
   },

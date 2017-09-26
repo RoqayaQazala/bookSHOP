@@ -21,9 +21,11 @@ app.use(bodyParser.json());
 // // 	});
 
 app.post('/api/users/signin', handlers.handleUsers.signin);
-app.get('/api/users', handlers.handleUsers.getUsers);
+// app.get('/api/users', handlers.handleUsers.getUsers);
 
-app.listen(process.env.PORT || 3000);
-console.log('Running on port 3000...');
+var port =8000;
+app.listen(port,function (){;
+console.log('Running on port 8000...')
+});
 
 module.exports = app;
